@@ -25,22 +25,24 @@
       <h2>Register</h2>
       <form>
         <div class="user-box">
-          <input type="text" name="" required="">
+          <input type="text" [(ngModel)]="user.nama" name="nama" #nama="ngModel" required>
           <label>Nama Pengguna</label>
         </div>
         <div class="user-box">
-          <input type="text" name="" required="">
+          <input type="text" [(ngModel)]="user.email" name="email" #email="ngModel" required>
           <label>Email</label>
         </div>
         <div class="user-box">
-          <input type="password" name="" required="">
+          <input type="password" [(ngModel)]="user.password" name="password" #password="ngModel" required>
           <label>Password</label>
         </div>
         <div class="user-box">
-          <input type="password" name="" required="">
+          <input type="password" [(ngModel)]="user.password2" name="password2" #password2="ngModel" (keyup)="checkMatch()" required>
           <label>Ulangi Password</label>
         </div>
-        <a href="#">
+        <span *ngIf="error" style="font-size: medium; color: white;" class="text-wrap">{{error.message}}</span>
+        <p *ngIf="match == false" style="color: white;">Confirmation New Password not match!</p>
+        <a (click)="register()">
           <span></span>
           <span></span>
           <span></span>

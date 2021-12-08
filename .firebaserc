@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "mymusik-d7388": {
+      "hosting": {
+        "musik": [
+          "mymusik-d7388"
+        ]
+      }
+    }
+  }
+}

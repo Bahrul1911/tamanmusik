@@ -25,14 +25,15 @@
         <h2>Login</h2>
         <form>
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" (keydown.enter)="enterLogin($event)" [(ngModel)]="user.email" name="email" #email="ngModel" required>
             <label>Email</label>
           </div>
           <div class="user-box">
-            <input type="password" name="" required="">
+            <input type="password" (keydown.enter)="enterLogin($event)" [(ngModel)]="user.password" name="password" #email="ngModel" required>
             <label>Password</label>
           </div>
-          <a routerLink="/dashboard">
+          <span *ngIf="error" style="font-size: medium; color: white;" class="text-wrap">{{error.message}}</span><br>
+          <a (click)="login()">
             <span></span>
             <span></span>
             <span></span>

@@ -8,6 +8,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
+        <li *ngIf="!loading && isLoggedIn" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/dashboard">Dashboard</a></li>
+        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Team</a></li>
+        <li *ngIf="!loading && isLoggedIn" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" (click)="logout()">Logout</a></li>
       </ul>
     </div>
   </div>
@@ -43,18 +46,22 @@
     <!-- Musik Items-->
     <div class="row justify-content-center">
       <!-- Musik Item 1-->
-      <div class="col-md-6 col-lg-4 mb-5">
+      <div class="col-md-6 col-lg-4 mb-5" *ngIf="loading">
+        <div class="portfolio-item mx-auto">
+          <p style="text-align: center;">Mengambil data lagu.......</p>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 mb-5" *ngFor="let n of allSongs">
         <div class="portfolio-item mx-auto" data-toggle="modal">
-          <p align="center">Setia Band-Istana Bintang</p>
-          <audio controls autoplay>
-            <source src="horse.ogg" type="audio/ogg">
-            <source src="horse.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
+          <p style="text-align: center;">{{n.title}}</p>
+          <p style="text-align: center;">{{n.artist}}</p>
+          <audio controls src="{{n.url}}" type="video/youtube">
           </audio>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 mb-5">
+      <!-- <div class="col-md-6 col-lg-4 mb-5">
         <div class="portfolio-item mx-auto" data-toggle="modal">
           <p align="center">Peterpan-Yang Terdalam</p>
           <audio controls autoplay>
@@ -63,9 +70,9 @@
             Your browser does not support the audio element.
           </audio>
         </div>
-      </div>
+      </div> -->
       <!-- Portfolio Item 3-->
-      <div class="col-md-6 col-lg-4 mb-5">
+      <!-- <div class="col-md-6 col-lg-4 mb-5">
         <div class="portfolio-item mx-auto" data-toggle="modal">
           <p align="center">Ungu-Sejauh Mungkin</p>
           <audio controls autoplay>
@@ -74,9 +81,9 @@
             Your browser does not support the audio element.
           </audio>
         </div>
-      </div>
+      </div> -->
       <!-- Portfolio Item 4-->
-      <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+      <!-- <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
         <div class="portfolio-item mx-auto" data-toggle="modal">
           <p align="center">Radja-Mimpi Indah</p>
           <audio controls autoplay>
@@ -85,9 +92,9 @@
             Your browser does not support the audio element.
           </audio>
         </div>
-      </div>
+      </div> -->
       <!-- Portfolio Item 5-->
-      <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+      <!-- <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
         <div class="portfolio-item mx-auto" data-toggle="modal">
           <p align="center">Slank-Terlalu Manis</p>
           <audio controls autoplay>
@@ -96,9 +103,9 @@
             Your browser does not support the audio element.
           </audio>
         </div>
-      </div>
+      </div> -->
       <!-- Portfolio Item 6-->
-      <div class="col-md-6 col-lg-4">
+      <!-- <div class="col-md-6 col-lg-4">
         <div class="portfolio-item mx-auto" data-toggle="modal">
           <p align="center">sheila-on-7-Berhenti Berharap</p>
           <audio controls autoplay>
@@ -107,7 +114,7 @@
             Your browser does not support the audio element.
           </audio>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
