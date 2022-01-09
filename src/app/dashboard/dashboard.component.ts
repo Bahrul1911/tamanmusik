@@ -47,6 +47,7 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+
   getSongs() {
     this.db.collection('songs').valueChanges().subscribe(res => {
       this.allSongs = res;
