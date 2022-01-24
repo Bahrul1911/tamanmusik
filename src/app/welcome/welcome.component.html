@@ -11,6 +11,7 @@
         <li *ngIf="!isLoggedIn && !loading" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/login">Login</a></li>
         <li *ngIf="!isLoggedIn && !loading" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/register">Sign Up</a></li>
         <li *ngIf="!loading && isLoggedIn" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/dashboard">Dashboard</a></li>
+        <li *ngIf="!loading && isLoggedIn" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" routerLink="/uploadview">Upload</a></li>
         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">About</a></li>
         <li *ngIf="!loading && isLoggedIn" class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" (click)="logout()">Logout</a></li>
       </ul>
