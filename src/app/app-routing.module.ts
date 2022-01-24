@@ -6,6 +6,7 @@ import {ProfileComponent} from './profile/profile.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {UploaderComponent} from './uploader/uploader.component';
+import {UploadviewComponent} from './uploader/uploadview/uploadview.component';
 
 
 const routes: Routes = [
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'upload',
     component: UploaderComponent
+  },
+  {
+    path: 'uploadview',
+    component: UploadviewComponent
   },
   {
     path: 'welcome',

@@ -16,6 +16,9 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
 import { UploaderComponent } from './uploader/uploader.component';
+import { UploadDetailsComponent } from './uploader/upload-details/upload-details.component';
+import { UploadListComponent } from './uploader/upload-list/upload-list.component';
+import { UploadviewComponent } from './uploader/uploadview/uploadview.component';
 
 
 @NgModule({
@@ -27,6 +30,9 @@ import { UploaderComponent } from './uploader/uploader.component';
     DashboardComponent,
     WelcomeComponent,
     UploaderComponent,
+    UploadDetailsComponent,
+    UploadListComponent,
+    UploadviewComponent,
   ],
   imports: [
     BrowserModule,
