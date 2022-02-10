@@ -1,4 +1,5 @@
-# Musik
+# Taman Musik
+Taman Musik adalah Sebuah applikasi berbasis website untuk mendengarkan musik, website ini dibangun menggunakan angular dan firebase
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.5.
 
